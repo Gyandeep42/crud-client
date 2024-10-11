@@ -12,7 +12,7 @@ const CreateUser = () => {
 
     const Submit = (e) =>{
         e.preventDefault();
-        axios.post("http://localhost:3000/createUser", {heading, content})
+        axios.post("https://crud-server-1.vercel.app/createUser", {heading, content})
         .then(result => {
             console.log(result)
             navigate('/')

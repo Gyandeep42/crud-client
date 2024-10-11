@@ -6,13 +6,13 @@ const User = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000')
+        axios.get('https://crud-server-1.vercel.app/')
             .then(result => setUsers(result.data))
             .catch(err => console.log(err))
     },[])
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3000/deleteUser/' + id)
+        axios.delete('https://crud-server-1.vercel.app/deleteUser/' + id)
             .then(res => {
                 console.log(res);
                 // Optionally, you can also remove the deleted user from state instead of reloading
